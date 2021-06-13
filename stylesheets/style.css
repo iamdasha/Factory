@@ -1,0 +1,7 @@
+@import "reset.css";
+@font-face {
+	font-family: "Swiss 721 Cyrillic BT";
+	src: url("../fonts/swiss-721-cyrillic-bt.woff") format("woff");
+	font-weight: normal;
+	font-style: normal;
+}
