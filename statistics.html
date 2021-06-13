@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="stylesheets/style.css">
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style media="screen">
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        background-color: #F0EDE8;
+        font-family: "Swiss 721 Cyrillic BT";
+        /* overflow: hidden; */
+        font-size: 17px;
+        width: 100vw;
+        height: 100vh;
+        cursor: url(images/coursor1.svg), auto;
+      }
+
+      /* body::before {
+        content: "";
+        position: absolute;
+        background-image: url(images/statistics.png);
+        height: 2967px;
+        width: 100vw;
+        opacity: 20%;
+        background-repeat: no-repeat;
+      } */
+
+      .content {
+        padding: 1.3vw;
+      }
+
+      main {
+        border: .1vw solid black;
+        margin-top: 1.3vw;
+      }
+
+      nav {
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        height: 7vw;
+        border: .1vw solid black;
+      }
+
+      a {
+        text-decoration: none;
+        color: black;
+        cursor: url(images/coursor2.svg), auto;
+      }
+
+      a:hover {
+        opacity: .5;
+        transition: all .6s ease;
+      }
+
+      nav a {
+        display: inline-grid;
+        text-align: center;
+        align-items: center;
+        font-size: 1vw;
+        border-right: .1vw solid black;
+      }
+
+      main div {
+
+      }
+
+      .logo {
+        background-image: url(images/logo.svg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+      }
+
+      .feedback {
+        border: none;
+      }
+
+      .handover {
+        color: #F44719;
+      }
+
+      .number {
+        display: grid;
+        justify-items: center;
+      }
+
+      .line {
+        border-right: .1vw solid black;
+        height: .9vw;
+        margin-top: -.1vw;
+
+      }
+
+      .num {
+        height: 6.8vw;
+        border: .15vw solid black;
+        border-left: none;
+        display: grid;
+      }
+
+      .num img {
+        width: 9vw;
+        z-index: 2;
+        grid-row: 1;
+        grid-column: 1;
+      }
+
+      .num .bg {
+        z-index: 1;
+        grid-row: 1;
+        grid-column: 1;
+      }
+
+      .orange {
+        background-color: #FF9045;
+      }
+
+      .red {
+        background-color: #F44719;
+      }
+
+      .blue {
+        background-color: #34A3B2;
+      }
+
+      .bg {
+        margin-right: 100%;
+        transition: margin-right 2s ease;
+      }
+
+      .num:hover .bg{
+        margin-right: 0%;
+      }
+
+      #measure {
+        display: inline-grid;
+        grid-template-columns: 7vw repeat(5, 1fr) 7vw;
+        height: 4vw;
+        width: 100%;
+      }
+
+      #month {
+        transform: rotate(-90deg);
+        margin-left: .3vw;
+        width: fit-content;
+        margin-top: 1vw;
+      }
+
+      #text {
+        text-align: center;
+        margin-top: 5vw;
+        font-size: 2.2vw;
+        margin-bottom: 9.5vw;
+      }
+      #graph {
+        display: grid;
+        grid-gap: 2vw;
+      }
+
+      #n1 {
+        margin-right: 73vw;
+      }
+
+      #n2 {
+        margin-right: 70vw;
+      }
+
+      #n3 {
+        margin-right: 43vw;
+      }
+
+      #n4 {
+        margin-right: 10vw;
+      }
+
+      #n5 {
+        margin-right: 23vw;
+      }
+
+      #n6 {
+        margin-right: 16vw;
+      }
+
+      #n7 {
+        margin-right: 6vw;
+      }
+
+      #n8 {
+        margin-right: 46vw;
+      }
+
+      #n9 {
+        margin-right: 61vw;
+      }
+
+      #n10 {
+        margin-right: 24vw;
+      }
+
+      #n11 {
+        margin-right: 10vw;
+      }
+
+      #n12 {
+        margin-right: 31vw;
+        border-bottom: none;
+      }
+
+      #n1 img {
+        width: 7.8vw;
+      }
+
+      #n11 img {
+        width: 7.2vw;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="content">
+      <nav>
+        <a class="logo" href="index.html"></a>
+        <a class="about" href="about.html">О&nbspФАБРИКЕ</a>
+        <a class="statistics" href="statistics.html">СТАТИСТИКА</a>
+        <a class="live" href="live.html">ЖИЗНЬ&nbspФАБРИКИ</a>
+        <a class="handover" href="handover.html">СДАТЬ ВЕЩИ</a>
+        <a class="shop" href="shop.html">МАГАЗИН</a>
+        <a class="feedback" href="feedback.html">ОБРАТНАЯ СВЯЗЬ</a>
+      </nav>
+      <main>
+        <div id="measure" class="">
+          <div id="month" class="">месяц</div>
+          <div id="" class="number">
+            <div id="" class="line"></div>
+            <div id="" class="count">10</div>
+          </div>
+          <div id="" class="number">
+            <div id="" class="line"></div>
+            <div id="" class="count">20</div>
+          </div>
+          <div id="" class="number">
+            <div id="" class="line"></div>
+            <div id="" class="count">30</div>
+          </div>
+          <div id="" class="number">
+            <div id="" class="line"></div>
+            <div id="" class="count">40</div>
+          </div>
+          <div id="" class="number">
+            <div id="" class="line"></div>
+            <div id="" class="count">50</div>
+          </div>
+        </div>
+        <div id="text" class="">График переработанных вещей за 2020 год</div>
+        <div id="graph" class="">
+          <div id="n1" class="num">
+            <div id="b1" class="bg orange"></div>
+            <img src="images/01.svg" alt="">
+          </div>
+          <div id="n2" class="num">
+            <div id="b2" class="bg blue"></div>
+            <img src="images/02.svg" alt="">
+          </div>
+          <div id="n3" class="num">
+            <div id="b3" class="bg red"></div>
+            <img src="images/03.svg" alt="">
+          </div>
+          <div id="n4" class="num">
+            <div id="b4" class="bg blue"></div>
+            <img src="images/04.svg" alt="">
+          </div>
+          <div id="n5" class="num">
+            <div id="b5" class="bg orange"></div>
+            <img src="images/05.svg" alt="">
+          </div>
+          <div id="n6" class="num">
+            <div id="b6" class="bg red"></div>
+            <img src="images/06.svg" alt="">
+          </div>
+          <div id="n7" class="num">
+            <div id="b7" class="bg orange"></div>
+            <img src="images/07.svg" alt="">
+          </div>
+          <div id="n8" class="num">
+            <div id="b8" class="bg blue"></div>
+            <img src="images/08.svg" alt="">
+          </div>
+          <div id="n9" class="num">
+            <div id="b9" class="bg red"></div>
+            <img src="images/09.svg" alt="">
+          </div>
+          <div id="n10" class="num">
+            <div id="b10" class="bg blue"></div>
+            <img src="images/10.svg" alt="">
+          </div>
+          <div id="n11" class="num">
+            <div id="b11" class="bg orange"></div>
+            <img src="images/11.svg" alt="">
+          </div>
+          <div id="n12" class="num">
+            <div id="b12" class="bg red"></div>
+            <img src="images/12.svg" alt="">
+          </div>
+
+        </div>
+      </main>
+    </div>
+  </body>
+</html>
