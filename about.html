@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="stylesheets/style.css">
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style media="screen">
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #FF9045;
+      font-family: "Swiss 721 Cyrillic BT";
+      /* overflow: hidden; */
+      font-size: 17px;
+    }
+
+    /* body::before {
+      content: "";
+      position: absolute;
+      background-image: url(images/about.png);
+      height: 100vh;
+      width: 100%;
+      opacity: 20%;
+      background-repeat: no-repeat;
+    } */
+
+    .content {
+      padding: 1.3vw;
+    }
+
+    nav {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      height: 11vh;
+      border: .1vw solid black;
+    }
+
+    main {
+      display: grid;
+      grid-template-rows: repeat(4, 1fr);
+      height: 82.6vh;
+      grid-template-columns: repeat(12, 1fr);
+      border: .1vw solid black;
+      margin-top: 1.3vw;
+      font-size: 2.2vw;
+    }
+
+    a {
+      text-decoration: none;
+      color: black;
+    }
+
+    a:hover {
+      opacity: .5;
+      transition: all .6s ease;
+    }
+
+    main a {
+      display: grid;
+      text-align: center;
+      align-items: center;
+    }
+
+    nav a {
+      display: inline-grid;
+      text-align: center;
+      align-items: center;
+      font-size: 1rem;
+      border-right: .1vw solid black;
+    }
+
+    .logo {
+      background-image: url(images/logo.svg);
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    .feedback {
+      border: none;
+    }
+
+    .handover {
+      color: #F0EDE8;
+    }
+
+    #about {
+      grid-area: 1/1/2/8;
+      font-size: 7vw;
+      display: grid;
+      align-items: center;
+      text-align: center;
+      border-bottom: .1vw solid black;
+      border-right: .1vw solid black;
+    }
+
+    #description {
+      grid-area: 2/1/5/8;
+      border-right: .1vw solid black;
+      padding: 1.3vw 0 0 1.3vw;
+      line-height: 2.3vw;
+    }
+
+    #description p {
+       width: 51vw;
+    }
+
+    #empty {
+      grid-area: 1/8/2/13;
+      border-bottom: .1vw solid black;
+    }
+
+    #history {
+      grid-area: 2/8/3/13;
+      border-bottom: .1vw solid black;
+    }
+
+    #technologies {
+      grid-area: 3/8/4/13;
+      border-bottom: .1vw solid black;
+    }
+
+    #book {
+      grid-area: 4/8/5/13;
+    }
+
+    .section:hover {
+      background-color: #F0EDE8;
+      transition: all .6s ease;
+    }
+    </style>
+  </head>
+  <body>
+    <div class="content">
+      <nav>
+        <a class="logo" href="index.html"></a>
+        <a class="about" href="about.html">О&nbspФАБРИКЕ</a>
+        <a class="statistics" href="statistics.html">СТАТИСТИКА</a>
+        <a class="live" href="live.html">ЖИЗНЬ&nbspФАБРИКИ</a>
+        <a class="handover" href="handover.html">СДАТЬ ВЕЩИ</a>
+        <a class="shop" href="shop.html">МАГАЗИН</a>
+        <a class="feedback" href="feedback.html">ОБРАТНАЯ СВЯЗЬ</a>
+      </nav>
+      <main>
+        <div id="about" class="">О ФАБРИКЕ</div>
+        <div id="description" class=""><p>Кавардак — это фабрика, которая принимает ненужные вещи и даёт им новую жизнь. В процессе апгрейда вещи меняют форму или даже объединяются в странные механизмы. Каждый предмет, оказавшийся на фабрике, находит себе место и применение, снова ощущает себя нужным.</p></div>
+        <div id="empty" class=""></div>
+        <a id="history" class="section" href="history.html">ИСТОРИЯ</a>
+        <a id="technologies" class="section" href="technologies.html">ТЕХНОЛОГИИ</a>
+        <a id="book" class="section" href="book.html">КНИГА</a>
+      </main>
+    </div>
+  </body>
+</html>
