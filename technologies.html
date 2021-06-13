@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="stylesheets/style.css">
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style media="screen">
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        background-color: #F0EDE8;
+        font-family: "Swiss 721 Cyrillic BT";
+        /* overflow: hidden; */
+        font-size: 17px;
+        width: 100vw;
+        height: 100vh;
+        cursor: url(images/coursor1.svg), auto;
+      }
+
+      /* body::before {
+        content: "";
+        position: absolute;
+        background-image: url(images/technologies.png);
+        height: 2967px;
+        width: 100vw;
+        opacity: 20%;
+        background-repeat: no-repeat;
+      } */
+
+      .content {
+        padding: 1.3vw;
+      }
+
+      main {
+        display: grid;
+        grid-template-rows: repeat(8, auto);
+        grid-template-columns: repeat(12, 1fr);
+        border: .1vw solid black;
+        margin-top: 1.3vw;
+        text-align: center;
+        justify-items: center;
+      }
+
+      nav {
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        height: 7vw;
+        border: .1vw solid black;
+      }
+
+      a {
+        text-decoration: none;
+        color: black;
+        cursor: url(images/coursor2.svg), auto;
+      }
+
+      a:hover {
+        opacity: .5;
+        transition: all .6s ease;
+      }
+
+      nav a {
+        display: inline-grid;
+        text-align: center;
+        align-items: center;
+        font-size: 1vw;
+        border-right: .1vw solid black;
+      }
+
+      main div {
+
+      }
+
+      h1 {
+        font-size: 7vw;
+        margin-top: 3vw;
+        margin-bottom: 4vw;
+      }
+
+      p {
+        font-size: 2.2vw;
+        line-height: 2.3vw;
+      }
+
+      .logo {
+        background-image: url(images/logo.svg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+      }
+
+      .feedback {
+        border: none;
+      }
+
+      .handover {
+        color: #F44719;
+      }
+
+      .menu {
+        grid-column: 1/4;
+        width: 16vw;
+        height: 5vw;
+        display: inline-grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        margin-left: 2vw;
+        justify-self: stretch;
+        justify-items: start;
+        font-size: 1vw;
+      }
+
+      #about {
+        opacity: .5;
+      }
+
+      #about:hover {
+        opacity: 1;
+      }
+
+      .step {
+        padding-top: 2.5vw;
+        padding-bottom: 6vw;
+      }
+
+      .gnome {
+        position: relative;
+        width: 5.3vw;
+        /* display: block; */
+      }
+
+      .one {
+        transform: rotate(45deg);
+        top: 1.7vw;
+        left: 6.2vw;
+        transition: transform 1s ease;
+      }
+
+      .one:hover {
+        transform: rotate(30deg);
+      }
+
+      .two {
+        transform: rotate(-60deg);
+        top: 9.6vw;
+        right: 5vw;
+        transition: transform 1s ease;
+      }
+
+      .two:hover {
+        transform: rotate(-52deg);
+      }
+
+      .three {
+        transform: rotate(52deg);
+        top: 3.3vw;
+        left: 2.9vw;
+        transition: transform 1s ease;
+      }
+
+      .three:hover {
+        transform: rotate(49deg);
+      }
+
+      #description {
+        grid-column: 1/6;
+        margin-left: 2vw;
+        margin-top: 3vw;
+        height: 8vw;
+        text-align: left;
+
+      }
+
+      #first {
+        grid-column: 1/8;
+        width: 57vw;
+        border-top: .1vw solid black;
+        border-bottom: .1vw solid black;
+      }
+
+      #first h1 {
+        color: #FF9045;
+      }
+
+      #second h1 {
+        color: #34A3B2;
+      }
+
+      #third h1 {
+        color: #F44719;
+      }
+
+      #fourth h1 {
+        color: #FF9045;
+      }
+
+      #fifth h1 {
+        color: #34A3B2;
+      }
+
+      #lab_contain {
+        grid-column: 8/12;
+        grid-row: 3;
+        display: grid;
+        border: .1vw solid black;
+      }
+
+      #lab {
+        background-image: url(images/lab.svg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        grid-column: 8/12;
+        grid-row: 3;
+        height: 32vw;
+        width: 32vw;
+        /* justify-self: stretch;
+        border: .1vw solid black; */
+        z-index: 2;
+      }
+
+      #water {
+        background-color: #34A3B2;
+        z-index: 1;
+        grid-column: 8/12;
+        grid-row: 3;
+        margin-top: 100%;
+        transition: margin-top 3s ease-in-out;
+      }
+
+      #lab_contain:hover #water {
+        margin-top: 1%;
+      }
+
+      #empty {
+        grid-column: 11/13;
+        grid-row: 3;
+        height: 32vw;
+        border-top: .1vw solid black;
+        border-bottom: .1vw solid black;
+        justify-self: stretch;
+      }
+
+      #figures {
+        grid-column: 1/6;
+        grid-row: 4;
+        border-bottom: .1vw solid black;
+        justify-self: stretch;
+      }
+
+      #castle {
+        transform: rotate(35deg);
+        width: 18vw;
+        position: relative;
+        top: 0.4vw;
+        left: 18.7vw;
+        transition: transform 1s ease;
+      }
+
+      #castle:hover {
+        transform: rotate(46deg);
+      }
+
+      #fountain {
+        width: 21vw;
+        position: relative;
+        top: 13vw;
+        right: 19vw;
+        transition: top 1s ease;
+      }
+
+      #fountain:hover {
+        top: 12vw;
+      }
+
+      #triangle {
+        transform: rotate(32deg);
+        width: 13vw;
+        position: relative;
+        left: 13vw;
+        transition: transform 1s ease;
+      }
+
+      #triangle:hover {
+        transform: rotate(28deg);
+      }
+
+      #second {
+        grid-column: 6/13;
+        grid-row: 4;
+        width: 57vw;
+        border-bottom: .1vw solid black;
+        border-left: .1vw solid black;
+      }
+
+      #third {
+        grid-column: 1/11;
+        grid-row: 5;
+        border-bottom: .1vw solid black;
+        border-right: .1vw solid black;
+        height: 30vw;
+      }
+
+      #gnomes {
+        grid-column: 11/13;
+        grid-row: 5;
+        border-bottom: .1vw solid black;
+        justify-self: stretch;
+      }
+
+      #roads {
+        background-image: url(images/roads.svg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        grid-column: 1/5;
+        grid-row: 6;
+        border-bottom: .1vw solid black;
+        justify-self: stretch;
+      }
+
+      #fourth {
+        grid-column: 5/13;
+        grid-row: 6;
+        border-bottom: .1vw solid black;
+        border-left: .1vw solid black;
+      }
+
+      #fifth {
+        grid-column: 1/10;
+        grid-row: 7;
+        border-bottom: .1vw solid black;
+        border-right: .1vw solid black;
+      }
+
+      #stripes {
+        background-image: url(images/stripes.svg);
+        background-position: center;
+        background-repeat: no-repeat;
+        grid-column: 10/13;
+        grid-row: 7;
+        border-bottom: .1vw solid black;
+        justify-self: stretch;
+      }
+
+      #done {
+        grid-column: 1/13;
+        grid-row: 8;
+        font-size: 7vw;
+        padding: 7vw 0;
+      }
+
+
+    </style>
+  </head>
+  <body>
+    <div class="content">
+      <nav>
+        <a class="logo" href="index.html"></a>
+        <a class="about" href="about.html">О&nbspФАБРИКЕ</a>
+        <a class="statistics" href="statistics.html">СТАТИСТИКА</a>
+        <a class="live" href="live.html">ЖИЗНЬ&nbspФАБРИКИ</a>
+        <a class="handover" href="handover.html">СДАТЬ ВЕЩИ</a>
+        <a class="shop" href="shop.html">МАГАЗИН</a>
+        <a class="feedback" href="feedback.html">ОБРАТНАЯ СВЯЗЬ</a>
+      </nav>
+      <main>
+        <div class="menu">
+          <a id="about" href="about.html">О ФАБРИКЕ</a>
+          <a href="technologies.html">ТЕХНОЛОГИИ</a>
+        </div>
+        <div id="description" class=""><p>Подробно обо&nbspвсех этапах переработки и&nbspтрансформации</p></div>
+        <div id="first" class="step">
+          <p>1</p>
+          <h1>ПРИЁМ ВЕЩЕЙ</h1>
+          <p>Клиенты приносят вещи к&nbspстойке информации и&nbspзаполняют анкету о&nbspсдаваемой вещи, затем работники передают вещи в&nbspпункт приёма</p>
+        </div>
+        <div id="lab_contain">
+          <div id="lab" class=""></div>
+          <div id="water" class=""></div>
+        </div>
+        <div id="empty" class=""></div>
+        <div id="figures" class="">
+          <img id="castle" src="images/castle.svg" alt="">
+          <img id="fountain" src="images/fountain.svg" alt="">
+          <img id="triangle" src="images/triangle.svg" alt="">
+        </div>
+        <div id="second" class="step">
+          <p>2</p>
+          <h1>СОРТИРОВКА</h1>
+          <p>Из&nbspпункта приёма все вещи попадают в&nbspсортировочный отдел, где их внимательно распределяют в&nbspразные отсеки, подготавливая к&nbspдальнейшей обработке</p>
+        </div>
+        <div id="third" class="step">
+          <p>3</p>
+          <h1>ОТПРАВЛЕНИЕ В ЦЕХ</h1>
+          <p>После тщательной сортировки вещи отправляют в&nbspогромную трубу, по&nbspкоторой они перемещаются в&nbspцех</p>
+        </div>
+        <div id="gnomes" class="">
+          <img class="gnome one" src="images/gnome_red.svg" alt="">
+          <img class="gnome two" src="images/gnome_red.svg" alt="">
+          <img class="gnome three" src="images/gnome_red.svg" alt="">
+        </div>
+        <div id="roads" class=""></div>
+        <div id="fourth" class="step">
+          <p>4</p>
+          <h1>ГЕНЕРАЦИЯ ИДЕЙ</h1>
+          <p>В цехе находится «мозг» фабрики – генератор идей для&nbspтрансформаций. Это&nbspспециальная машина, которая находит наиболее выгодные и&nbspполезные<br>комбинации вещей.</p>
+        </div>
+        <div id="fifth" class="step">
+          <p>5</p>
+          <h1>ТРАНСФОРМАЦИЯ</h1>
+          <p>Вещи разбирают, деформируют и&nbspсоединяют между собой, чтобы&nbspсоздать новые</p>
+        </div>
+        <div id="stripes" class=""></div>
+        <div id="done" class="">ВАША ВЕЩЬ ОБНОВЛЕНА!</div>
+      </main>
+    </div>
+  </body>
+</html>
