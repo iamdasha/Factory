@@ -1,0 +1,200 @@
+@import "../stylesheets/reset.css";
+@font-face {
+	font-family: "Swiss 721 Cyrillic BT";
+	src: url("../fonts/swiss-721-cyrillic-bt.woff") format("woff");
+	font-weight: normal;
+	font-style: normal;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #F0EDE8;
+  font-family: "Swiss 721 Cyrillic BT";
+  font-size: 17px;
+  cursor: url(../images/coursor1.svg), auto;
+  height: 100vh;
+}
+
+.content {
+  padding: 1.3vw;
+  height: 100%;
+}
+
+nav {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  height: 7vw;
+  border: 2px solid black;
+}
+
+main {
+  display: flex;
+  justify-content: stretch;
+  height: calc(100vh - 10.9vw);
+  border: 2px solid black;
+  margin-top: 1.3vw;
+  font-size: 1.1em;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  cursor: url(../images/coursor2.svg), auto;
+}
+
+a:hover {
+  opacity: .5;
+  transition: all .6s ease;
+}
+
+main a {
+  display: grid;
+  text-align: center;
+  align-items: center;
+}
+
+nav a {
+  display: inline-grid;
+  text-align: center;
+  align-items: center;
+  font-size: 1vw;
+}
+
+.logo {
+  justify-items: center;
+  border-right: 2px solid black;
+}
+
+.logo img {
+  width: 86%;
+}
+
+.logo:hover {
+  opacity: 1;
+}
+
+.handover {
+  color: #F44719;
+}
+
+.pic {
+  grid-area: 1/1/4/3;
+  width: fit-content;
+  position: relative;
+}
+
+.pic img {
+  height: 100%;
+  border-right: 2px solid black;
+}
+
+.right {
+  display: grid;
+  width: 100%;
+  grid-template-rows: 15% 70% 15%;
+}
+
+.name {
+  border-bottom: 2px solid black;
+  font-size: 1.5em;
+  display: grid;
+  padding: 1.2vw;
+}
+
+.name p {
+  align-self: center;
+}
+
+.description {
+  padding: 1.2vw;
+}
+
+.description p {
+  margin-bottom: 1.2vw;
+}
+
+.footer {
+  border-top: 2px solid black;
+  display: flex;
+  text-align: center;
+  font-size: 1.5em;
+}
+
+.price {
+  width: 50%;
+  align-self: center;
+}
+
+.buy {
+  background-color: #34A3B2;
+  border-left: 2px solid black;
+  width: 50%;
+  display: grid;
+	cursor: url(../images/coursor2.svg), auto;
+}
+
+.buy p {
+  align-self: center;
+  transition: .3s ease;
+}
+
+.buy:hover {
+  background-color: #FF9045;
+}
+
+.popup {
+  width: 50vw;
+  height: 27vw;
+  background-color: #F0EDE8;
+  position: fixed;
+  top: calc(52% - 30vh);
+  left: calc(50% - 25vw);
+  border: 2px solid black;
+  display: none;
+}
+
+.inside {
+  display: grid;
+  width: 100%;
+  grid-template-rows: 43% 19%;
+  height: 100%;
+  text-align: center;
+  font-size: 3vw;
+}
+
+.close {
+  justify-self: right;
+  width: 2vw;
+  margin: 1vw;
+	cursor: url(../images/coursor2.svg), auto;
+}
+
+.close:hover {
+  opacity: .5;
+}
+
+.bg {
+  background-color: #F0EDE8;
+  opacity: 0.9;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: none;
+}
+
+.arrow {
+  width: fit-content;
+  position: relative;
+  top: -97%;
+  left: 2%;
+}
+
+.arrow img {
+  width: 100%;
+  border: none;
+}
