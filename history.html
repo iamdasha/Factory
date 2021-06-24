@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="stylesheets/style.css">
+    <link rel="icon" type="image/png" href="images/favicon.png" />
+    <title>ИСТОРИЯ</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style media="screen">
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        background-color: #F0EDE8;
+        font-family: "Swiss 721 Cyrillic BT";
+        overflow-x: scroll;
+        overflow-y: hidden;
+        font-size: 17px;
+        /* width: 100vw; */
+        height: 100%;
+        cursor: url(images/coursor1.svg), auto;
+      }
+
+      body::before {
+        content: "";
+        position: absolute;
+        width: 4095px;
+        background-image: url(images/history.png);
+        height: 900px;
+        opacity: 20%;
+        background-repeat: no-repeat;
+      }
+
+      .content {
+        padding: 1.3vw;
+        display: block;
+        position: relative;
+        width: 100%;
+        height: 100%;
+      }
+
+      main {
+        display: grid;
+        grid-template-rows: 5vw 23vw;
+        grid-template-columns: 7vw 30vw 29vw 38vw 36vw 37vw 34vw 39vw auto;
+        border: 2px solid black;
+        margin-top: calc(1.3vw + 7vw);
+        width: 4060px;
+        height: calc(100vh - 10.9vw);
+      }
+
+      nav {
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        height: 7vw;
+        border: 2px solid black;
+        position: fixed;
+        width: 97.4vw;
+      }
+
+      a {
+        text-decoration: none;
+        color: black;
+        cursor: url(images/coursor2.svg), auto;
+      }
+
+      a:hover {
+        opacity: .5;
+        transition: all .6s ease;
+      }
+
+      nav a {
+        text-align: center;
+        align-self: center;
+        font-size: 1vw;
+      }
+
+      main div {
+
+      }
+
+      h1 {
+        font-size: 7vw;
+        margin-top: 3vw;
+        margin-bottom: 4vw;
+      }
+
+      p {
+        font-size: 1.2vw;
+        padding: .7vw 0 0 0.9vw;
+      }
+
+      .logo:hover {
+        opacity: 1;
+      }
+
+      .logo img {
+        width: 86%;
+        border: none;
+        margin-top: 8.5%;
+      }
+
+      .logo {
+        align-self: stretch;
+      }
+
+      .feedback {
+        border: none;
+      }
+
+      .handover {
+        color: #F44719;
+      }
+
+      .menu {
+        grid-column: 1/4;
+        width: 16vw;
+        height: 5vw;
+        display: inline-grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        margin-left: 2vw;
+        justify-self: stretch;
+        justify-items: start;
+        font-size: 1vw;
+      }
+
+      #about {
+        opacity: .5;
+      }
+
+      #about:hover {
+        opacity: 1;
+      }
+
+      .frame {
+        width: 22vw;
+        height: 23vw;
+        border: 2px solid black;
+      }
+
+      .text {
+        border: 2px solid black;
+        font-size: 1.2vw;
+        background-color: #F0EDE8;
+        z-index: 2;
+      }
+
+      img {
+        z-index: 1;
+        border: 2px solid black;
+      }
+
+      #frame_1 {
+        grid-column-start: 2;
+        grid-row-start:2;
+
+      }
+
+      #img_1 {
+        width: 18vw;
+        grid-column-start: 2;
+        grid-row-start: 2;
+        transform: rotate(-17deg);
+        margin: 5vw 0 0 -4vw;
+      }
+
+      #frame_2 {
+        grid-column-start: 3;
+      }
+
+      #text_1 {
+        grid-column-start: 2;
+        grid-row-start:2;
+        width: 20vw;
+        height: 9vw;
+        margin: 11vw 0 0 7vw;
+      }
+
+      #date_1 {
+        font-size: 7vw;
+        grid-column-start: 2;
+        grid-row-start:2;
+        z-index: 3;
+        color: #34A3B2;
+        margin-left: 6vw;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="content">
+      <nav>
+        <a class="logo" href="index.html">
+          <img src="images/logo.svg" alt="">
+        </a>
+        <a class="about" href="about.html">О&nbspФАБРИКЕ</a>
+        <a class="statistics" href="statistics.html">СТАТИСТИКА</a>
+        <a class="live" href="live.html">ЖИЗНЬ&nbspФАБРИКИ</a>
+        <a class="handover" href="handover.html">СДАТЬ ВЕЩИ</a>
+        <a class="shop" href="shop.html">МАГАЗИН</a>
+        <a class="feedback" href="feedback.html">ОБРАТНАЯ СВЯЗЬ</a>
+      </nav>
+      <main>
+        <div class="menu">
+          <a id="about" href="about.html">О ФАБРИКЕ</a>
+          <a href="technologies.html">ИСТОРИЯ</a>
+        </div>
+        <div id="frame_1" class="frame"></div>
+        <img id="img_1" src="images/img1.png" alt="">
+        <div id="text_1" class="text">
+          <p>Житель небольшого городка решил починить и переделать уже не нужные предметы быта в своем доме. Будучи мастером на все руки, он стал создавать удивительные и полезные вещи</p>
+        </div>
+        <div id="date_1" class="date">1860</div>
+        <div id="frame_2" class="frame"></div>
+        <img id="img_2" src="" alt="">
+        <div id="text_2" class="text"></div>
+        <div id="date_2" class="date"></div>
+        <div id="frame_3" class="frame"></div>
+        <img id="img_3" src="" alt="">
+        <div id="text_3" class="text"></div>
+        <div id="date_3" class="date"></div>
+        <div id="frame_4" class="frame"></div>
+        <img id="img_4" src="" alt="">
+        <div id="text_4" class="text"></div>
+        <div id="date_4" class="date"></div>
+        <div id="frame_5" class="frame"></div>
+        <img id="img_5" src="" alt="">
+        <div id="text_5" class="text"></div>
+        <div id="date_5" class="date"></div>
+        <div id="frame_6" class="frame"></div>
+        <img id="img_6" src="" alt="">
+        <div id="text_6" class="text"></div>
+        <div id="date_6" class="date"></div>
+        <div id="frame_7" class="frame"></div>
+        <img id="img_7" src="" alt="">
+        <div id="text_7" class="text"></div>
+        <div id="date_7" class="date"></div>
+        <div id="frame_8" class="frame"></div>
+        <img id="img_8" src="" alt="">
+        <div id="text_8" class="text"></div>
+        <div id="date_8" class="date"></div>
+      </main>
+    </div>
+  </body>
+</html>
