@@ -4,7 +4,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="stylesheets/style.css">
-    <title></title>
+    <link rel="icon" type="image/png" href="images/favicon.png" />
+    <title>СТАТИСТИКА</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <style media="screen">
 
@@ -15,29 +16,18 @@
       body {
         background-color: #F0EDE8;
         font-family: "Swiss 721 Cyrillic BT";
-        /* overflow: hidden; */
         font-size: 17px;
         width: 100vw;
         height: 100vh;
         cursor: url(images/coursor1.svg), auto;
       }
 
-      /* body::before {
-        content: "";
-        position: absolute;
-        background-image: url(images/statistics.png);
-        height: 2967px;
-        width: 100vw;
-        opacity: 20%;
-        background-repeat: no-repeat;
-      } */
-
       .content {
         padding: 1.3vw;
       }
 
       main {
-        border: .15vw solid black;
+        border: 2px solid black;
         margin-top: 1.3vw;
       }
 
@@ -45,7 +35,7 @@
         display: grid;
         grid-template-columns: repeat(7, 1fr);
         height: 7vw;
-        border: .15vw solid black;
+        border: 2px solid black;
       }
 
       a {
@@ -64,18 +54,14 @@
         text-align: center;
         align-items: center;
         font-size: 1vw;
-        border-right: .15vw solid black;
       }
 
       main div {
 
       }
 
-      .logo {
-        background-image: url(images/logo.svg);
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: contain;
+      .logo:hover {
+        opacity: 1;
       }
 
       .feedback {
@@ -92,17 +78,18 @@
       }
 
       .line {
-        border-right: .15vw solid black;
+        border-right: 2px solid black;
         height: .9vw;
         margin-top: -.1vw;
 
       }
 
       .num {
-        height: 6.8vw;
-        border: .15vw solid black;
+        /* height: 6.8vw; */
+        border: 2px solid black;
         border-left: none;
         display: grid;
+        z-index: 2;
       }
 
       .num img {
@@ -140,17 +127,23 @@
       }
 
       #measure {
-        display: inline-grid;
-        grid-template-columns: 7vw repeat(5, 1fr) 7vw;
+        display: flex;
+        justify-content: space-evenly;
         height: 4vw;
         width: 100%;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        font-size: 1.5vw;
       }
 
       #month {
         transform: rotate(-90deg);
-        margin-left: .3vw;
         width: fit-content;
-        margin-top: 1vw;
+        position: relative;
+        top: 2.3vw;
+        font-size: 1.5vw;
+        left: -0.8%;
       }
 
       #text {
@@ -165,51 +158,51 @@
       }
 
       #n1 {
-        margin-right: 73vw;
+        width: 25vw;
       }
 
       #n2 {
-        margin-right: 70vw;
+        width: 28vw;
       }
 
       #n3 {
-        margin-right: 43vw;
+        width: 54vw;
       }
 
       #n4 {
-        margin-right: 10vw;
+        width: 81vw;
       }
 
       #n5 {
-        margin-right: 23vw;
+        width: 74vw;
       }
 
       #n6 {
-        margin-right: 16vw;
+        width: 78vw;
       }
 
       #n7 {
-        margin-right: 6vw;
+        width: 91vw;
       }
 
       #n8 {
-        margin-right: 46vw;
+        width: 50vw;
       }
 
       #n9 {
-        margin-right: 61vw;
+        width: 35vw;
       }
 
       #n10 {
-        margin-right: 24vw;
+        width: 73vw;
       }
 
       #n11 {
-        margin-right: 10vw;
+        width: 78vw;
       }
 
       #n12 {
-        margin-right: 31vw;
+        width: 65vw;
         border-bottom: none;
       }
 
@@ -225,7 +218,9 @@
   <body>
     <div class="content">
       <nav>
-        <a class="logo" href="index.html"></a>
+        <a class="logo" href="index.html">
+          <img src="images/logo.svg" alt="">
+        </a>
         <a class="about" href="about.html">О&nbspФАБРИКЕ</a>
         <a class="statistics" href="statistics.html">СТАТИСТИКА</a>
         <a class="live" href="live.html">ЖИЗНЬ&nbspФАБРИКИ</a>
@@ -235,7 +230,6 @@
       </nav>
       <main>
         <div id="measure" class="">
-          <div id="month" class="">месяц</div>
           <div id="" class="number">
             <div id="" class="line"></div>
             <div id="" class="count">10</div>
