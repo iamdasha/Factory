@@ -4,7 +4,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="stylesheets/style.css">
-    <title></title>
+    <link rel="icon" type="image/png" href="images/favicon.png" />
+    <title>ТЕХНОЛОГИИ</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <style media="screen">
 
@@ -15,22 +16,11 @@
       body {
         background-color: #F0EDE8;
         font-family: "Swiss 721 Cyrillic BT";
-        /* overflow: hidden; */
         font-size: 17px;
         width: 100vw;
         height: 100vh;
         cursor: url(images/coursor1.svg), auto;
       }
-
-      /* body::before {
-        content: "";
-        position: absolute;
-        background-image: url(images/technologies.png);
-        height: 2967px;
-        width: 100vw;
-        opacity: 20%;
-        background-repeat: no-repeat;
-      } */
 
       .content {
         padding: 1.3vw;
@@ -40,7 +30,7 @@
         display: grid;
         grid-template-rows: repeat(8, auto);
         grid-template-columns: repeat(12, 1fr);
-        border: .15vw solid black;
+        border: 2px solid black;
         margin-top: 1.3vw;
         text-align: center;
         justify-items: center;
@@ -50,7 +40,7 @@
         display: grid;
         grid-template-columns: repeat(7, 1fr);
         height: 7vw;
-        border: .15vw solid black;
+        border: 2px solid black;
       }
 
       a {
@@ -69,7 +59,6 @@
         text-align: center;
         align-items: center;
         font-size: 1vw;
-        border-right: .15vw solid black;
       }
 
       main div {
@@ -83,15 +72,14 @@
       }
 
       p {
-        font-size: 2.2vw;
-        line-height: 2.3vw;
+        font-size: 1.1em;
+        line-height: normal;
+        padding: 0 3vw;
+
       }
 
-      .logo {
-        background-image: url(images/logo.svg);
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
+      .logo:hover {
+        opacity: 1;
       }
 
       .feedback {
@@ -125,13 +113,12 @@
 
       .step {
         padding-top: 2.5vw;
-        padding-bottom: 6vw;
+        padding-bottom: 5vw;
       }
 
       .gnome {
         position: relative;
         width: 5.3vw;
-        /* display: block; */
       }
 
       .one {
@@ -176,11 +163,14 @@
 
       }
 
+      #description p {
+        padding: 0;
+      }
+
       #first {
         grid-column: 1/8;
-        width: 57vw;
-        border-top: .15vw solid black;
-        border-bottom: .15vw solid black;
+        border-top: 2px solid black;
+        border-bottom: 2px solid black;
       }
 
       #first h1 {
@@ -203,52 +193,40 @@
         color: #34A3B2;
       }
 
-      #lab_contain {
-        grid-column: 8/12;
-        grid-row: 3;
-        display: grid;
-        border: .15vw solid black;
-      }
-
       #lab {
-        background-image: url(images/lab.svg);
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: contain;
         grid-column: 8/12;
         grid-row: 3;
-        height: 32vw;
-        width: 32vw;
-        /* justify-self: stretch;
-        border: .1vw solid black; */
+        border: 2px solid black;
+        justify-self: stretch;
         z-index: 2;
       }
 
       #water {
         background-color: #34A3B2;
-        z-index: 1;
         grid-column: 8/12;
         grid-row: 3;
-        margin-top: 100%;
+        margin-top: 99.5%;
         transition: margin-top 3s ease-in-out;
+        justify-self: stretch;
+        z-index: 1;
       }
 
-      #lab_contain:hover #water {
-        margin-top: 1%;
+      #lab:hover ~ #water {
+        margin-top: 0%;
       }
 
       #empty {
         grid-column: 11/13;
         grid-row: 3;
-        border-top: .15vw solid black;
-        border-bottom: .15vw solid black;
+        border-top: 2px solid black;
+        border-bottom: 2px solid black;
         justify-self: stretch;
       }
 
       #figures {
         grid-column: 1/6;
         grid-row: 4;
-        border-bottom: .15vw solid black;
+        border-bottom: 2px solid black;
         justify-self: stretch;
       }
 
@@ -293,22 +271,23 @@
         grid-column: 6/13;
         grid-row: 4;
         width: 57vw;
-        border-bottom: .15vw solid black;
-        border-left: .15vw solid black;
+        border-bottom: 2px solid black;
+        border-left: 2px solid black;
       }
 
       #third {
         grid-column: 1/11;
         grid-row: 5;
-        border-bottom: .15vw solid black;
-        border-right: .15vw solid black;
+        border-bottom: 2px solid black;
+        border-right: 2px solid black;
         height: 30vw;
+        justify-self: stretch;
       }
 
       #gnomes {
         grid-column: 11/13;
         grid-row: 5;
-        border-bottom: .15vw solid black;
+        border-bottom: 2px solid black;
         justify-self: stretch;
       }
 
@@ -319,22 +298,23 @@
         background-size: contain;
         grid-column: 1/5;
         grid-row: 6;
-        border-bottom: .15vw solid black;
+        border-bottom: 2px solid black;
         justify-self: stretch;
       }
 
       #fourth {
         grid-column: 5/13;
         grid-row: 6;
-        border-bottom: .15vw solid black;
-        border-left: .15vw solid black;
+        border-bottom: 2px solid black;
+        border-left: 2px solid black;
       }
 
       #fifth {
         grid-column: 1/10;
         grid-row: 7;
-        border-bottom: .15vw solid black;
-        border-right: .15vw solid black;
+        border-bottom: 2px solid black;
+        border-right: 2px solid black;
+        justify-self: stretch;
       }
 
       #stripes {
@@ -343,7 +323,7 @@
         background-repeat: no-repeat;
         grid-column: 10/13;
         grid-row: 7;
-        border-bottom: .15vw solid black;
+        border-bottom: 2px solid black;
         justify-self: stretch;
       }
 
@@ -360,7 +340,9 @@
   <body>
     <div class="content">
       <nav>
-        <a class="logo" href="index.html"></a>
+        <a class="logo" href="index.html">
+          <img src="images/logo.svg" alt="">
+        </a>
         <a class="about" href="about.html">О&nbspФАБРИКЕ</a>
         <a class="statistics" href="statistics.html">СТАТИСТИКА</a>
         <a class="live" href="live.html">ЖИЗНЬ&nbspФАБРИКИ</a>
@@ -379,10 +361,9 @@
           <h1>ПРИЁМ ВЕЩЕЙ</h1>
           <p>Клиенты приносят вещи к&nbspстойке информации и&nbspзаполняют анкету о&nbspсдаваемой вещи, затем работники передают вещи в&nbspпункт приёма</p>
         </div>
-        <div id="lab_contain">
-          <div id="lab" class=""></div>
-          <div id="water" class=""></div>
-        </div>
+        <img id="lab" src="images/labb.svg" alt="">
+        <!-- <div id="lab" class=""></div> -->
+        <div id="water" class=""></div>
         <div id="empty" class=""></div>
         <div id="figures" class="">
           <img id="castle" src="images/castle.svg" alt="">
