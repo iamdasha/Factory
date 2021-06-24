@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="stylesheets/style.css">
+    <link rel="icon" type="image/png" href="images/favicon.png" />
+    <title>СДАТЬ ВЕЩИ</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function(){
+        $('.close').click(function(){
+	        $('.popup').css('display', 'none');
+	        $('.bg').css('display', 'none');
+        })
+
+        $('.button').click(function(){
+	        $('.popup').css('display', 'block');
+	        $('.bg').css('display', 'block');
+          $('input').val('');
+          $('textarea').val('');
+        })
+      });
+    </script>
+    <style media="screen">
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #FF9045;
+      font-family: "Swiss 721 Cyrillic BT";
+      font-size: 17px;
+      cursor: url(images/coursor1.svg), auto;
+    }
+
+    .content {
+      padding: 1.3vw;
+    }
+
+    nav {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      height: 7vw;
+      border: 2px solid black;
+    }
+
+    main {
+      display: grid;
+      grid-template-rows: 11vw  6vw 6vw 26vw 26vw 23vw;
+      grid-template-columns: repeat(12, 1fr);
+      border: 2px solid black;
+      margin-top: 1.3vw;
+      font-size: 2.2vw;
+    }
+
+    a {
+      text-decoration: none;
+      color: black;
+      cursor: url(images/coursor2.svg), auto;
+    }
+
+    a:hover {
+      opacity: .5;
+      transition: all .6s ease;
+    }
+
+    main a {
+      display: grid;
+      text-align: center;
+      align-items: center;
+    }
+
+    nav a {
+      display: inline-grid;
+      text-align: center;
+      align-items: center;
+      font-size: 1vw;
+    }
+
+    .logo:hover {
+      opacity: 1;
+    }
+
+    .handover {
+      color: #F0EDE8;
+    }
+
+    .form {
+      font-size: 6.8vw;
+      grid-area: 1/1/2/13;
+      align-items: center;
+      text-align: center;
+      display: grid;
+    }
+
+    .n {
+      grid-area: 2/1/3/7;
+    }
+
+    .f {
+      grid-area: 3/1/4/7;
+      border-top: none;
+    }
+
+    .d {
+      grid-area: 2/7/3/13;
+      border-left: none;
+      border-right: none;
+    }
+
+    .k {
+      grid-area: 3/7/4/13;
+      border-left: none;
+      border-top: none;
+      border-right: none;
+    }
+
+    .text {
+      font-size: 2vw;
+      padding: 1.2vw 0 0 1.2vw;
+    }
+
+    #description {
+      grid-area: 4/1/5/13;
+      border-bottom: 2px solid black;
+    }
+
+    .one {
+      grid-area: 4/1/5/13;
+    }
+
+    #result {
+      grid-area: 5/1/6/13;
+      border-bottom: 2px solid black;
+    }
+
+    .two {
+      grid-area: 5/1/6/13;
+    }
+
+    .comment {
+      margin: 4.8vw 1.2vw 1.2vw;
+      background: transparent;
+      border: none;
+      outline: none;
+      font-size: 2vw;
+      font-family: 'Swiss 721 Cyrillic BT';
+    }
+
+    input {
+    background-color: transparent;
+    border: 2px solid;
+    font-size: 2vw;
+    padding-left: 1.2vw;
+    appearance: none;
+    outline: none;
+    border-left: none;
+    font-family: 'Swiss 721 Cyrillic BT';
+    cursor: url(images/coursor2.svg), auto;
+    }
+
+    .form-label {
+      padding-left: 1.2vw;
+      align-self: center;
+      color: #AD622F;
+      width: fit-content;
+      position: relative;
+      transition: .3s;
+    }
+
+
+    input::placeholder {
+      color: #AD622F;
+    }
+
+    input:hover input::placeholder {
+      color: #F0EDE8;
+    }
+
+    input:focus {
+      background-color: #F0EDE8;
+    }
+
+    textarea:focus {
+      background-color: #F0EDE8;
+    }
+
+    .form-input:focus + .form-label,
+    .form-input:not(:focus):valid + .form-label {
+      top: -1.9vw;
+      font-size: 1vw;
+      cursor: pointer;
+    }
+
+    #reason {
+      grid-area: 6/1/7/4;
+      display: grid;
+      align-content: space-evenly;
+      border-right: 2px solid black;
+      padding-left: 2.6vw;
+      font-size: 2vw;
+    }
+
+    #information {
+      grid-area: 6/4/7/9;
+      display: grid;
+      grid-template-rows: 25% 25% auto;
+      font-size: 2vw;
+    }
+
+    .p {
+      grid-area: 1/1/2/2;
+    }
+
+    .e {
+      grid-area: 2/1/3/2;
+    }
+
+    .custom-radio {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+    cursor: url(images/coursor2.svg), auto;
+  }
+
+  .custom-radio+label {
+    display: inline-flex;
+    align-items: center;
+    user-select: none;
+  }
+
+  .custom-radio+label::before {
+    content: '';
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    flex-shrink: 0;
+    flex-grow: 0;
+    border: 2px solid black;
+    border-radius: 50%;
+    margin-right: 0.5em;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+
+  .custom-radio:not(:disabled):not(:checked)+label:hover::before {
+    border-color: #F0EDE8;
+  }
+
+  .custom-radio:not(:disabled):active+label::before {
+    background-color: black;
+    border-color: black;
+  }
+
+  .custom-radio:focus:not(:checked)+label::before {
+    border-color: black;
+  }
+
+  .custom-radio:checked+label::before {
+    background-color: black;
+  }
+
+  .custom-checkbox {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+  cursor: url(images/coursor2.svg), auto;
+}
+
+.custom-checkbox+label {
+  display: inline-flex;
+  align-items: center;
+  user-select: none;
+  padding-left: 2.6vw;
+}
+
+  .custom-checkbox+label::before {
+    content: '';
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    flex-shrink: 0;
+    flex-grow: 0;
+    border: 2px solid black;
+    border-radius: 50%;
+    margin-right: 0.5em;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+
+  .custom-checkbox:not(:disabled):not(:checked)+label:hover::before {
+    border-color: #F0EDE8;
+  }
+
+  .custom-checkbox:not(:disabled):active+label::before {
+    background-color: black;
+    border-color: black;
+  }
+
+  .custom-checkbox:focus:not(:checked)+label::before {
+    border-color: black;
+  }
+
+  .custom-checkbox:checked+label::before {
+    background-color: black;
+  }
+
+  .phone {
+    border: none;
+    border-right: 2px solid black;
+  }
+
+  .checkbox {
+    display: flex;
+    border-right: 2px solid black;
+  }
+
+  .button {
+    grid-area: 6/9/7/13;
+    display: grid;
+    text-align: center;
+    align-items: center;
+    font-size: 2.2em;
+    cursor: url(images/coursor2.svg), auto;
+
+  }
+
+  .button:hover {
+    background-color: #F0EDE8;
+    transition: all .6s ease;
+    opacity: 1;
+  }
+
+  .popup {
+    width: 50vw;
+    height: 27vw;
+    background-color: #F0EDE8;
+    position: fixed;
+    top: calc(52% - 33vh);
+    left: calc(50% - 25vw);
+    border: 2px solid black;
+    display: none;
+  }
+
+  .inside {
+    display: grid;
+    width: 100%;
+    grid-template-rows: 35% 19%;
+    height: 100%;
+    text-align: center;
+    font-size: 3vw;
+  }
+
+  .close {
+    justify-self: right;
+    width: 2vw;
+    margin: 1vw;
+    cursor: url(images/coursor2.svg), auto;
+  }
+
+  .close:hover {
+    opacity: .5;
+  }
+
+  .bg {
+    background-color: #FF9045;
+    opacity: 0.9;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: none;
+  }
+
+    </style>
+  </head>
+  <body>
+    <div class="content">
+      <nav>
+        <a class="logo" href="index.html">
+          <img src="images/logo.svg" alt="">
+        </a>
+        <a class="about" href="about.html">О&nbspФАБРИКЕ</a>
+        <a class="statistics" href="statistics.html">СТАТИСТИКА</a>
+        <a class="live" href="live.html">ЖИЗНЬ&nbspФАБРИКИ</a>
+        <a class="handover" href="handover.html">СДАТЬ ВЕЩИ</a>
+        <a class="shop" href="shop.html">МАГАЗИН</a>
+        <a class="feedback" href="feedback.html">ОБРАТНАЯ СВЯЗЬ</a>
+      </nav>
+      <main>
+        <div class="form">АНКЕТА ДЛЯ СДАЧИ ВЕЩЕЙ</div>
+        <input class="n form-input" type="text" name="" value="" required>
+        <label class="n form-label">Имя</label>
+        <input class="f form-input" type="text" name="" value="" required>
+        <label class="f form-label">Фамилия</label>
+        <input class="d form-input" type="text" name="" value="" required>
+        <label class="d form-label">Дата сдачи</label>
+        <input class="k form-input" type="text" name="" value="" required>
+        <label class="k form-label">Количество</label>
+        <div id="description" class="text">Краткое описание сдаваемых вещей:</div>
+        <textarea class="comment one" name="name" rows="8" cols="80"></textarea>
+        <div id="result" class="text">Ожидаемый результат:</div>
+        <textarea class="comment two" name="name" rows="8" cols="80"></textarea>
+        <div id="reason" class="">
+          <p>Причина сдачи:</p>
+          <div class="radio">
+            <input class="custom-radio" type="radio" id="broke" name="color" value="indigo">
+            <label for="broke">Поломка</label>
+          </div>
+
+          <div class="radio">
+            <input class="custom-radio" type="radio" id="old" name="color" value="red">
+            <label for="old">Устаревание</label>
+          </div>
+
+          <div class="radio">
+            <input class="custom-radio" type="radio" id="useless" name="color" value="brown">
+            <label for="useless">Бесполезность</label>
+          </div>
+        </div>
+        <div id="information">
+          <input class="p form-input phone" type="tel" name="" value="" required>
+          <label class="p form-label">Телефон</label>
+          <input class="e form-input email" type="text" name="" value="" required>
+          <label class="e form-label">Email</label>
+          <div class="checkbox">
+            <input class="custom-checkbox" type="checkbox" id="info" name="color" value="brown">
+            <label for="info">Даю согласие на обработку персональных данных</label>
+          </div>
+        </div>
+        <div class="button"><p>ОТПРАВИТЬ</p></div>
+        <div class="bg"></div>
+        <div class="popup">
+          <div class="inside">
+            <img class="close" src="images/close.svg" alt="">
+            <p>УРА!</p>
+            <p>Ваша заявка отправлена</p>
+          </div>
+        </div>
+
+
+      </main>
+    </div>
+  </body>
+</html>
