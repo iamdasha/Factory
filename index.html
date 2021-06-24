@@ -4,9 +4,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="stylesheets/style.css">
-    <title></title>
+    <link rel="icon" type="image/png" href="images/favicon.png" />
+    <title>ГЛАВНАЯ</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <!-- <script src="https://gravityscript.github.io/grav.js"></script> -->
+    <script src="javascript/grav.js"></script>
     <style media="screen">
 
       * {
@@ -16,32 +17,22 @@
       body {
         background-color: #F0EDE8;
         font-family: "Swiss 721 Cyrillic BT";
-        /* overflow: hidden; */
         font-size: 17px;
         width: 100vw;
         cursor: url(images/coursor1.svg), auto;
-      }
-
-      /* body::before {
-        content: "";
-        position: absolute;
-        background-image: url(images/main.png);
         height: 100vh;
-        width: 100vw;
-        opacity: 20%;
-        background-repeat: no-repeat;
-      } */
+      }
 
       .content {
         padding: 1.3vw;
+        height: 100%;
       }
 
       main {
         display: grid;
         grid-template-rows: repeat(6, 1fr);
-        height: 82.6vh;
+        height: calc(100vh - 10.9vw);
         grid-template-columns: repeat(12, 1fr);
-        border: .1vw solid black;
         margin-top: 1.3vw;
         padding: 0 1vw 2vh;
       }
@@ -49,8 +40,8 @@
       nav {
         display: grid;
         grid-template-columns: repeat(7, 1fr);
-        height: 11vh;
-        border: .1vw solid black;
+        height: 7vw;
+        border: 2px solid black;
       }
 
       a {
@@ -59,7 +50,7 @@
         cursor: url(images/coursor2.svg), auto;
       }
 
-      a:hover {
+      nav a:hover {
         opacity: .5;
         transition: all .6s ease;
       }
@@ -68,30 +59,32 @@
         display: inline-grid;
         text-align: center;
         align-items: center;
-        font-size: 1rem;
-        border-right: .1vw solid black;
+        font-size: 1vw;
       }
 
-      main div {
+      main img {
         align-self: center;
         justify-self: center;
 
       }
 
-      main a {
+      main div {
         font-size: 7vw;
         align-self: center;
+        justify-self: center;
       }
 
       .logo {
-        background-image: url(images/logo.svg);
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: contain;
+        justify-items: center;
+        border-right: 2px solid black;
       }
 
-      .feedback {
-        border: none;
+      .logo img {
+        width: 86%;
+      }
+
+      .logo:hover {
+        opacity: 1;
       }
 
       #circle {
@@ -185,43 +178,21 @@
 
       #figure_1 {
         grid-area: 1/3/2/4;
-        height: 5vw;
+      }
+
+      .circle {
         width: 5vw;
-        background-color: #FF9045;
-        border-radius: 50%;
       }
 
       .triangle {
-        border-left: 3vw solid transparent;
-        border-right: 3vw solid transparent;
-        border-bottom: 5vw solid red;
-      }
-
-      #figure_3 {
-        border-bottom-color: #34A3B2;
-      }
-
-      #figure_5 {
-        border-bottom-color: #34A3B2;
-      }
-
-      #figure_6 {
-        border-bottom-color: #F44719;
-      }
-
-      #figure_10 {
-        border-bottom-color: #FF9045;
+        width: 6vw;
       }
 
       .castle {
-        background-image: url(images/castle.svg);
-        background-position: center;
-        background-repeat: no-repeat;
+        width: 6vw;
       }
 
       .gnome {
-        background-position: center;
-        background-repeat: no-repeat;
         width: 4vw;
         align-self: end;
         justify-self: center;
@@ -233,7 +204,9 @@
   <body>
     <div class="content">
       <nav>
-        <a class="logo" href="index.html"></a>
+        <a class="logo" href="index.html">
+          <img src="images/logo.svg" alt="">
+        </a>
         <a class="about" href="about.html">О&nbspФАБРИКЕ</a>
         <a class="statistics" href="statistics.html">СТАТИСТИКА</a>
         <a class="live" href="live.html">ЖИЗНЬ&nbspФАБРИКИ</a>
@@ -242,25 +215,25 @@
         <a class="feedback" href="feedback.html">ОБРАТНАЯ СВЯЗЬ</a>
       </nav>
       <main>
-        <div id="figure_1"></div>
-        <a id="shop" href="shop.html">MAГАЗИН</a>
-        <a id="history" class="" href="history.html">ИСТОРИЯ</a>
-        <a id="live" class="" href="live.html">ЖИЗНЬ ФАБРИКИ</a>
-        <div id="figure_2" class="castle"></div>
-        <div id="figure_3" class="triangle"></div>
-        <a id="statistics" class="" href="statistics.html">СТАТИСТИКА</a>
-        <div id="figure_4" class=""></div>
-        <a id="about" class="" href="about.html">О ФАБРИКЕ</a>
-        <div id="figure_5" class="triangle"></div>
-        <div id="figure_6" class="triangle"></div>
-        <a id="technologies" class="" href="technologies.html">ТЕХНОЛОГИИ</a>
-        <img id="figure_7" class="gnome" src="images/gnome_red.svg" alt="">
-        <a id="feedback" class="" href="feedback">ОБРАТНАЯ СВЯЗЬ</a>
-        <img id="figure_8" class="gnome" src="images/gnome_orange.svg" alt="">
-        <a id="book" class="" href="book.html">КНИГА</a>
-        <div id="figure_9" class="castle"></div>
-        <div id="figure_10" class="triangle"></div>
-        <a id="handover" class="" href="handover.html">СДАТЬ ВЕЩИ</a>
+        <img id="figure_1" class="img circle" src="images/circle.svg" alt="">
+        <div id="shop" class="gravity" href="shop.html">MAГАЗИН</div>
+        <div id="history" class="gravity" href="history.html">ИСТОРИЯ</div>
+        <div id="live" class="gravity" href="live.html">ЖИЗНЬ&nbspФАБРИКИ</div>
+        <img id="figure_2" class="img castle" src="images/castle.svg" alt="">
+        <img id="figure_3" class="img triangle" src="images/blue_tr.svg" alt="">
+        <div id="statistics" class="gravity" href="statistics.html">СТАТИСТИКА</div>
+        <div id="figure_4" class="gravity"></div>
+        <div id="about" class="gravity" href="about.html">О&nbspФАБРИКЕ</div>
+        <img id="figure_5" class="img triangle" src="images/blue_tr.svg" alt="">
+        <img id="figure_6" class="img triangle" src="images/red_tr.svg" alt="">
+        <div id="technologies" class="gravity" href="technologies.html">ТЕХНОЛОГИИ</div>
+        <img id="figure_7" class="img gnome" src="images/gnome_red.svg" alt="">
+        <div id="feedback" class="gravity" href="feedback">ОБРАТНАЯ&nbspСВЯЗЬ</div>
+        <img id="figure_8" class="img gnome" src="images/gnome_orange.svg" alt="">
+        <div id="book" class="gravity" href="book.html">КНИГА</div>
+        <img id="figure_9" class="img castle" src="images/castle.svg" alt="">
+        <img id="figure_10" class="img triangle" src="images/orange_tr.svg" alt="">
+        <div id="handover" class="gravity" href="handover.html">СДАТЬ&nbspВЕЩИ</div>
       </main>
     </div>
   </body>
