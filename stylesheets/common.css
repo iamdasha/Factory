@@ -1,0 +1,14 @@
+
+
+.logo {
+  justify-items: center;
+  border-right: 2px solid black;
+}
+
+.logo img {
+  width: 86%;
+}
+
+.logo:hover {
+  opacity: 1;
+}
