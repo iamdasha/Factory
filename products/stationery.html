@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="products.css">
+    <link rel="icon" type="image/png" href="../images/favicon.png" />
+    <title>Набор фирменной канцелярии</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+    $(document).ready(function(){
+      $('.close').click(function(){
+        $('.popup').css('display', 'none');
+        $('.bg').css('display', 'none');
+      })
+
+      $('.buy').click(function(){
+        $('.popup').css('display', 'block');
+        $('.bg').css('display', 'block');
+
+      })
+    });
+  </script>
+  </head>
+  <body>
+    <div class="content">
+      <nav>
+        <a class="logo" href="index.html">
+          <img src="../images/logo.svg" alt="">
+        </a>
+        <a class="about" href="../about.html">О&nbspФАБРИКЕ</a>
+        <a class="statistics" href="../statistics.html">СТАТИСТИКА</a>
+        <a class="live" href="../live.html">ЖИЗНЬ&nbspФАБРИКИ</a>
+        <a class="handover" href="../handover.html">СДАТЬ ВЕЩИ</a>
+        <a class="shop" href="../shop.html">МАГАЗИН</a>
+        <a class="feedback" href="../feedback.html">ОБРАТНАЯ СВЯЗЬ</a>
+      </nav>
+      <main>
+        <div class="pic">
+          <img src="../images/Stationery.png" alt="">
+          <a class="arrow" href="../shop.html">
+            <img src="../images/arrow.svg" alt="">
+          </a>
+        </div>
+        <div class="right">
+          <div class="name"><p>Набор фирменной канцелярии</p></div>
+          <div class="description">
+            <p>В набор входит:</p>
+            <ul>
+              <li>визитки</li>
+              <li>конверты</li>
+              <li>бланк</li>
+              <li>простой карандаш</li>
+            </ul>
+          </div>
+          <div class="footer">
+            <div class="price">800 руб</div>
+            <div class="buy"><p>КУПИТЬ</p></div>
+          </div>
+        </div>
+        <div class="bg"></div>
+        <div class="popup">
+          <div class="inside">
+            <img class="close" src="../images/close.svg" alt="">
+            <p>Ваша заказ уже в пути!</p>
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>
