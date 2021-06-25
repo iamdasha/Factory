@@ -5,58 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="stylesheets/style.css">
     <link rel="icon" type="image/png" href="images/favicon.png" />
-    <title>ЖИЗНЬ ФАБРИКИ</title>
+    <title>СТАТИСТИКА</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <style media="screen">
-
     * {
       box-sizing: border-box;
-    }
-
-    html {
-      position: relative;
-      height: 100%;
-      width: 100%;
     }
 
     body {
       background-color: #F0EDE8;
       font-family: "Swiss 721 Cyrillic BT";
-      /* height: 100%; */
+      /* overflow: hidden; */
+      font-size: 17px;
+      width: 100vw;
+      height: 100vh;
+      cursor: none;
       cursor: url(images/coursor1.svg), auto;
-      width: 100%;
-      margin: 0;
-      display: block;
-      position: relative;
     }
-
-    /* body::before {
-      content: "";
-      position: absolute;
-      width: 4095px;
-      background-image: url(images/history.png);
-      height: 900px;
-      opacity: 20%;
-      background-repeat: no-repeat;
-    } */
-
-    .wrapper {
-      position: relative;
-      width: 100%;
-    }
-
-    .ratio {
-      position: relative;
-      padding-bottom: 100vh;
-    }
-
     .content {
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 0;
       padding: 1.3vw;
+    }
+
+    main {
+      display: flex;
+      border: 2px solid black;
+      margin-top: 1.3vw;
+      grid-gap: 2px;
+      justify-content: space-evenly;
+      padding: 0 15vw;
+
     }
 
     nav {
@@ -64,13 +41,6 @@
       grid-template-columns: repeat(7, 1fr);
       height: 7vw;
       border: 2px solid black;
-    }
-
-    main {
-      display: grid;
-      border: 2px solid black;
-      margin-top: 1.3vw;
-      height: calc(100vh - 10.9vw);
     }
 
     a {
@@ -84,9 +54,6 @@
       transition: all .6s ease;
     }
 
-    main a {
-    }
-
     nav a {
       display: inline-grid;
       text-align: center;
@@ -94,94 +61,187 @@
       font-size: 1vw;
     }
 
+    p {
+      font-size: 1.3vw;
+
+    }
+
     .logo:hover {
       opacity: 1;
+    }
+
+    .feedback {
+      border: none;
     }
 
     .handover {
       color: #F44719;
     }
 
-    .container {
-      position: absolute;
-      width: 95%;
-      height: calc(100vh - 13.9vw);
-      top: 58%;
-      left: 50%;
-      margin-right: -50%;
-      transform: translate(-50%, -50%);
+    .menu {
+      grid-column: 1/4;
+      width: 16vw;
+      height: 5vw;
+      display: inline-grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      margin-left: 2vw;
+      justify-self: stretch;
+      justify-items: start;
+      font-size: 1vw;
     }
 
-    .container .img {
-      margin: 0;
+    .product, .e {
+      background-color: #F0EDE8;
+    }
+
+    .product img {
+      width: 100%;
+      border-bottom: 2px solid black;
+    }
+
+    .name {
+      display: flex;
+      justify-content: space-between;
+      padding: 2vw 1vw;
+    }
+
+    .color {
+      background-color: red;
       width: 100%;
       height: 100%;
-      position: absolute;
-      background-image: url(images/forms.svg);
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: contain;
+      position: relative;
     }
 
-    .text {
-      font-size: 6vw;
-      position: absolute;
+    .first, .one {
+      grid-area: 1/1/2/2;
     }
 
-    .forms {
-      position: absolute;
-      width: 100%;
-      height: 100%;
+    .second, .two {
+      grid-area: 1/2/2/3;
     }
 
-    .worker {
-
+    .third, .three {
+      grid-area: 2/1/3/2;
     }
 
-    .worker img {
-
+    .fourth, .four {
+      grid-area: 2/3/3/4;
     }
+
+    .fifth, .five {
+      grid-area: 3/2/4/3;
+    }
+
+    .sixth, .six {
+      grid-area: 3/3/4/4;
+    }
+
+    .seven, .seventh {
+      grid-area: 4/1/5/2;
+    }
+
+    .eighth, .eight {
+      grid-area: 4/3/5/4;
+    }
+
+    .ninth, .nine {
+      grid-area: 5/1/6/2;
+    }
+
+    .tenth, .ten {
+      grid-area: 5/3/6/4;
+    }
+
+    .orange {
+      background-color: #FF9045;
+    }
+
+    .red {
+      background-color: #F44719;
+    }
+
+    .blue {
+      background-color: #34A3B2;
+    }
+
+    .color {
+      opacity: 0;
+      transition: .4s ease;
+    }
+
+    .color:hover {
+      opacity: 1;
+    }
+
+    .buy {
+      border: 2px solid black;
+      padding: 1.2vw;
+      display: grid;
+      margin: 6.2em 4em 0;
+      text-align: center;
+      font-size: 2vw;
+    }
+
+    #about {
+      opacity: .5;
+    }
+
+    #about:hover {
+      opacity: 1;
+    }
+
+    .burger {
+      display: none;
+    }
+
+    .sales img {
+      width: 30vw;
+      height: 43vw;
+    }
+
+    .castle img {
+      width: 30vw;
+      height: 43vw;
+    }
+
+    @media only screen and (min-width: 569px) and (max-width: 1023px) {
+      .pic img {
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    @media only screen and (min-width: 320px) and (max-width: 568px) {}
+
+
 
     </style>
   </head>
   <body>
-    <div class="wrapper">
-      <div class="ratio">
-        <div class="content">
-          <nav>
-            <a class="logo" href="index.html">
-              <img src="images/logo.svg" alt="">
-            </a>
-            <a class="about" href="about.html">О&nbspФАБРИКЕ</a>
-            <a class="statistics" href="statistics.html">СТАТИСТИКА</a>
-            <a class="live" href="live.html">ЖИЗНЬ&nbspФАБРИКИ</a>
-            <a class="handover" href="handover.html">СДАТЬ ВЕЩИ</a>
-            <a class="shop" href="shop.html">МАГАЗИН</a>
-            <a class="feedback" href="feedback.html">ОБРАТНАЯ СВЯЗЬ</a>
-          </nav>
-          <main>
-            <div class="container">
-              <img class="forms" src="images/forms.svg" alt="">
-              <a class="worker" href="worker.html">
-                <img src="images/worker.svg" alt="">
-              </a>
-              <!-- <div class="text">
-                <p>РАБОТНИК</p>
-                <p>МЕСЯЦА</p>
-              </div>
-              <div class="text">
-                <p>ВЕБ-</p>
-                <p>ПЛАКАТЫ</p>
-              </div>
-              <div class="text">
-                <p>СО-</p>
-                <p>БЫ-</p>
-                <p>ТИЯ</p> -->
-              </div>
-            </div>
-          </main>
+    <div class="content">
+      <nav>
+        <a class="logo" href="index.html">
+          <img src="images/logo.svg" alt="">
+        </a>
+        <a class="about" href="about.html">О&nbspФАБРИКЕ</a>
+        <a class="statistics" href="statistics.html">СТАТИСТИКА</a>
+        <a class="live" href="live.html">ЖИЗНЬ&nbspФАБРИКИ</a>
+        <a class="handover" href="handover.html">СДАТЬ ВЕЩИ</a>
+        <a class="shop" href="shop.html">МАГАЗИН</a>
+        <a class="feedback" href="feedback.html">ОБРАТНАЯ СВЯЗЬ</a>
+        <div class="burger">
+          <img src="images/burger.svg" alt="">
         </div>
-      </div>
+      </nav>
+      <main>
+        <a class="sales" href="#">
+          <img src="images/sales.jpg" alt="">
+        </a>
+        <a class="castle" href="#">
+          <img src="images/castle.jpg" alt="">
+        </a>
+      </main>
     </div>
   </body>
 </html>
