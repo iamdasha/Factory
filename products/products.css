@@ -198,3 +198,104 @@ nav a {
   width: 100%;
   border: none;
 }
+
+.burger {
+	display: none;
+}
+
+@media only screen and (min-width: 569px) and (max-width: 1275px) {
+	main {
+		display: block;
+		height: auto;
+	}
+	.pic img {
+		width: 100%;
+		height: auto;
+		border-right: none;
+		border-bottom: 2px solid black;
+	}
+
+	.arrow {
+	  width: 3%;
+	  position: absolute;
+	  top: 3%;
+		border: none;
+	}
+
+	.arrow img {
+	  border: none;
+	}
+
+	.right {
+		display: grid;
+		grid-template-rows: 10vh 30vh 11vh;
+	}
+
+	.name {
+		display: block;
+	}
+}
+
+@media only screen and (min-width: 320px) and (max-width: 568px) {
+	main {
+		display: block;
+		height: auto;
+		font-size: .7em;
+	}
+
+	nav {
+		height: 12vw;
+		display: flex;
+		justify-content: space-between;
+
+	}
+
+	nav a {
+		display: none;
+	}
+
+	.logo {
+		display: grid;
+		position: relative;
+		width: 25%;
+	}
+
+	.burger {
+		display: grid;
+		align-self: center;
+		justify-self: center;
+		margin-right: 4vw;
+	}
+
+	.burger img {
+		width: 6vw;
+	}
+
+	.pic img {
+		width: 100%;
+		height: auto;
+		border-right: none;
+		border-bottom: 2px solid black;
+	}
+
+	.arrow {
+		width: 3%;
+		position: absolute;
+		top: 3%;
+		border: none;
+	}
+
+	.arrow img {
+		border: none;
+	}
+
+	.right {
+		display: grid;
+		grid-template-rows: 10vh 30vh 11vh;
+	}
+
+	.name {
+		display: block;
+	}
+
+}
