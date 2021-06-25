@@ -1,0 +1,598 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #F0EDE8;
+  font-family: "Swiss 721 Cyrillic BT";
+  font-size: 17px;
+  width: 100vw;
+  height: 100vh;
+  cursor: url(../images/coursor1.svg), auto;
+}
+
+.content {
+  padding: 1.3vw;
+}
+
+main {
+  display: grid;
+  grid-template-rows: repeat(8, auto);
+  grid-template-columns: repeat(12, 1fr);
+  border: 2px solid black;
+  margin-top: 1.3vw;
+  text-align: center;
+  justify-items: center;
+}
+
+nav {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  height: 7vw;
+  border: 2px solid black;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  cursor: url(../images/coursor2.svg), auto;
+}
+
+a:hover {
+  opacity: .5;
+  transition: all .6s ease;
+}
+
+nav a {
+  display: inline-grid;
+  text-align: center;
+  align-items: center;
+  font-size: 1vw;
+}
+
+main div {
+
+}
+
+h1 {
+  font-size: 7vw;
+  margin-top: 3vw;
+  margin-bottom: 4vw;
+}
+
+p {
+  font-size: 1.4em;
+  line-height: normal;
+  padding: 0 3vw;
+
+}
+
+.logo:hover {
+  opacity: 1;
+}
+
+.feedback {
+  border: none;
+}
+
+.handover {
+  color: #F44719;
+}
+
+.menu {
+  grid-column: 1/4;
+  width: 16vw;
+  height: 5vw;
+  display: inline-grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  margin-left: 2vw;
+  justify-self: stretch;
+  justify-items: start;
+  font-size: 1vw;
+}
+
+#about {
+  opacity: .5;
+}
+
+#about:hover {
+  opacity: 1;
+}
+
+.step {
+  padding-top: 2.5vw;
+  padding-bottom: 5vw;
+}
+
+.gnome {
+  position: relative;
+  width: 5.3vw;
+}
+
+.one {
+  transform: rotate(45deg);
+  top: 1.7vw;
+  left: 6.2vw;
+  transition: transform 1s ease;
+}
+
+.one:hover {
+  transform: rotate(30deg);
+}
+
+.two {
+  transform: rotate(-60deg);
+  top: 9.6vw;
+  right: 5vw;
+  transition: transform 1s ease;
+}
+
+.two:hover {
+  transform: rotate(-52deg);
+}
+
+.three {
+  transform: rotate(52deg);
+  top: 3.3vw;
+  left: 2.9vw;
+  transition: transform 1s ease;
+}
+
+.three:hover {
+  transform: rotate(49deg);
+}
+
+#description {
+  grid-column: 1/9;
+  margin: 3vw 0 3vw 2vw;
+  height: auto;
+  text-align: left;
+  font-size: 2vw;
+
+}
+
+#description p {
+  padding: 0;
+}
+
+#first {
+  grid-column: 1/8;
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+}
+
+#first h1 {
+  color: #FF9045;
+}
+
+#second h1 {
+  color: #34A3B2;
+}
+
+#third h1 {
+  color: #F44719;
+}
+
+#fourth h1 {
+  color: #FF9045;
+}
+
+#fifth h1 {
+  color: #34A3B2;
+}
+
+#lab {
+  grid-column: 8/12;
+  grid-row: 3;
+  border: 2px solid black;
+  justify-self: stretch;
+  z-index: 2;
+}
+
+#water {
+  background-color: #34A3B2;
+  grid-column: 8/12;
+  grid-row: 3;
+  margin-top: 99.5%;
+  transition: margin-top 3s ease-in-out;
+  justify-self: stretch;
+  z-index: 1;
+}
+
+#lab:hover ~ #water {
+  margin-top: 0%;
+}
+
+#empty {
+  grid-column: 11/13;
+  grid-row: 3;
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+  justify-self: stretch;
+}
+
+#figures {
+  grid-column: 1/6;
+  grid-row: 4;
+  border-bottom: 2px solid black;
+  justify-self: stretch;
+}
+
+#castle {
+  transform: rotate(35deg);
+  width: 18vw;
+  position: relative;
+  top: 0.4vw;
+  left: 18.7vw;
+  transition: transform 1s ease;
+}
+
+#castle:hover {
+  transform: rotate(46deg);
+}
+
+#fountain {
+  width: 21vw;
+  position: relative;
+  top: 13vw;
+  right: 19vw;
+  transition: top 1s ease;
+}
+
+#fountain:hover {
+  top: 12vw;
+}
+
+#triangle {
+  transform: rotate(32deg);
+  width: 13vw;
+  position: relative;
+  left: 13vw;
+  transition: transform 1s ease;
+}
+
+#triangle:hover {
+  transform: rotate(28deg);
+}
+
+#second {
+  grid-column: 6/13;
+  grid-row: 4;
+  width: 57vw;
+  border-bottom: 2px solid black;
+  border-left: 2px solid black;
+}
+
+#third {
+  grid-column: 1/11;
+  grid-row: 5;
+  border-bottom: 2px solid black;
+  border-right: 2px solid black;
+  height: 30vw;
+  justify-self: stretch;
+}
+
+#gnomes {
+  grid-column: 11/13;
+  grid-row: 5;
+  border-bottom: 2px solid black;
+  justify-self: stretch;
+}
+
+#roads {
+  background-image: url(../images/roads.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  grid-column: 1/5;
+  grid-row: 6;
+  border-bottom: 2px solid black;
+  justify-self: stretch;
+}
+
+#fourth {
+  grid-column: 5/13;
+  grid-row: 6;
+  border-bottom: 2px solid black;
+  border-left: 2px solid black;
+}
+
+#fifth {
+  grid-column: 1/10;
+  grid-row: 7;
+  border-bottom: 2px solid black;
+  border-right: 2px solid black;
+  justify-self: stretch;
+}
+
+#stripes {
+  background-image: url(../images/stripes.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  grid-column: 10/13;
+  grid-row: 7;
+  border-bottom: 2px solid black;
+  justify-self: stretch;
+}
+
+#done {
+  grid-column: 1/13;
+  grid-row: 8;
+  font-size: 7vw;
+  padding: 7vw 0;
+}
+
+    .burger {
+      display: none;
+    }
+
+    @media only screen and (min-width: 569px) and (max-width: 1023px) {
+
+      #lab, #water {
+        grid-column: 8/13;
+        border-right: none;
+      }
+
+      #roads {
+        display: none;
+      }
+
+      #fourth {
+        grid-column: 1/13;
+        border-left: none;
+      }
+
+      p {
+        font-size: 1em;
+      }
+
+      #description {
+        grid-column: 1/7;
+      }
+
+    }
+
+    @media only screen and (min-width: 320px) and (max-width: 568px) {
+
+    	nav {
+    		height: 12vw;
+    		display: flex;
+    		justify-content: space-between;
+
+    	}
+
+    	nav a {
+    		display: none;
+    	}
+
+    	.logo {
+    		display: grid;
+    		position: relative;
+    		width: 25%;
+    	}
+
+    	.burger {
+    		display: grid;
+    		align-self: center;
+    		justify-self: center;
+    		margin-right: 4vw;
+    	}
+
+    	.burger img {
+    		width: 6vw;
+    	}
+
+      main {
+        grid-template-rows: repeat(9, auto);
+        grid-template-columns: repeat(4, 1fr);
+        font-size: .9em;
+      }
+
+      .menu {
+        grid-column: 1/4;
+        width: 30vw;
+        height: 5vw;
+        display: inline-grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        margin-left: 2vw;
+        justify-self: stretch;
+        justify-items: start;
+        font-size: 2vw;
+      }
+
+      #about {
+        opacity: .5;
+      }
+
+      #about:hover {
+        opacity: 1;
+      }
+
+      .step {
+        padding-top: 2.5vw;
+        padding-bottom: 5vw;
+      }
+
+      .gnome {
+        position: relative;
+        width: 5.3vw;
+      }
+
+      .one {
+        transform: rotate(45deg);
+        top: 1.7vw;
+        left: 6.2vw;
+        transition: transform 1s ease;
+      }
+
+      .one:hover {
+        transform: rotate(30deg);
+      }
+
+      .two {
+        transform: rotate(-60deg);
+        top: 9.6vw;
+        right: 5vw;
+        transition: transform 1s ease;
+      }
+
+      .two:hover {
+        transform: rotate(-52deg);
+      }
+
+      .three {
+        transform: rotate(52deg);
+        top: 3.3vw;
+        left: 2.9vw;
+        transition: transform 1s ease;
+      }
+
+      .three:hover {
+        transform: rotate(49deg);
+      }
+
+      #description {
+        grid-column: 1/5;
+        margin-left: 2vw;
+        margin-top: 3vw;
+        height: auto;
+        font-size: 3vw;
+
+      }
+
+      #description p {
+        padding: 0;
+      }
+
+      #first {
+        grid-column: 1/5;
+        border-top: 2px solid black;
+        border-bottom: 2px solid black;
+      }
+
+      #lab {
+        grid-column: 1/5;
+        grid-row: 4;
+      }
+
+      #water {
+        grid-column: 1/5;
+        grid-row: 4;
+      }
+
+      #lab, #water {
+        border: none;
+      }
+
+      #empty {
+        display: none;
+      }
+
+      #figures {
+        grid-column: 1/5;
+        grid-row: 5;
+        display: none;
+      }
+
+      #castle {
+        transform: rotate(35deg);
+        width: 18vw;
+        position: relative;
+        top: 0.4vw;
+        left: 18.7vw;
+        transition: transform 1s ease;
+      }
+
+      #castle:hover {
+        transform: rotate(46deg);
+      }
+
+      #fountain {
+        width: 21vw;
+        position: relative;
+        top: 13vw;
+        right: 19vw;
+        transition: top 1s ease;
+      }
+
+      #fountain:hover {
+        top: 12vw;
+      }
+
+      #triangle {
+        transform: rotate(32deg);
+        width: 13vw;
+        position: relative;
+        left: 13vw;
+        transition: transform 1s ease;
+      }
+
+      #second {
+        grid-column: 1/5;
+        grid-row: 6;
+        width: auto;
+        border-bottom: 2px solid black;
+        border-top: 2px solid black;
+        border-left: none;
+      }
+
+      #third {
+        grid-column: 1/5;
+        grid-row: 7;
+        border-bottom: 2px solid black;
+        border-right: none;
+        height: auto;
+      }
+
+      #gnomes {
+        grid-column: 1/15;
+        grid-row: 8;
+        border-bottom: 2px solid black;
+        justify-self: stretch;
+        display: none;
+      }
+
+      #roads {
+        background-image: url(../images/roads.svg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        grid-column: 1/5;
+        grid-row: 8;
+        border-bottom: 2px solid black;
+        justify-self: stretch;
+        display: none;
+      }
+
+      #fourth {
+        grid-column: 1/5;
+        grid-row: 9;
+        border-left: none;
+      }
+
+      #fifth {
+        grid-column: 1/15;
+        grid-row: 10;
+        border-right: none;
+        border-left: none;
+      }
+
+      #stripes {
+        background-image: url(../images/stripes.svg);
+        grid-column: 1/5;
+        grid-row: 8;
+        border-bottom: 2px solid black;
+        border-left: none;
+        background-size: 100%;
+        height: 20vw;
+      }
+
+      #done {
+        grid-column: 1/15;
+        grid-row: 12;
+        font-size: 7vw;
+        padding: 7vw 0;
+      }
+    }
