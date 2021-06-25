@@ -1,0 +1,277 @@
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        background-color: #F0EDE8;
+        font-family: "Swiss 721 Cyrillic BT";
+        font-size: 17px;
+        width: 100vw;
+        height: 100vh;
+        cursor: url(../images/coursor1.svg), auto;
+      }
+
+      .content {
+        padding: 1.3vw;
+      }
+
+      main {
+        border: 2px solid black;
+        margin-top: 1.3vw;
+      }
+
+      nav {
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        height: 7vw;
+        border: 2px solid black;
+      }
+
+      a {
+        text-decoration: none;
+        color: black;
+        cursor: url(../images/coursor2.svg), auto;
+      }
+
+      a:hover {
+        opacity: .5;
+        transition: all .6s ease;
+      }
+
+      nav a {
+        display: inline-grid;
+        text-align: center;
+        align-items: center;
+        font-size: 1vw;
+      }
+
+      main div {
+
+      }
+
+      .logo:hover {
+        opacity: 1;
+      }
+
+      .feedback {
+        border: none;
+      }
+
+      .handover {
+        color: #F44719;
+      }
+
+      .number {
+        display: grid;
+        justify-items: center;
+      }
+
+      .line {
+        border-right: 2px solid black;
+        height: .9vw;
+        margin-top: -.1vw;
+
+      }
+
+      .num {
+        /* height: 6.8vw; */
+        border: 2px solid black;
+        border-left: none;
+        display: grid;
+        z-index: 2;
+      }
+
+      .num img {
+        width: 9vw;
+        z-index: 2;
+        grid-row: 1;
+        grid-column: 1;
+      }
+
+      .num .bg {
+        z-index: 1;
+        grid-row: 1;
+        grid-column: 1;
+      }
+
+      .orange {
+        background-color: #FF9045;
+      }
+
+      .red {
+        background-color: #F44719;
+      }
+
+      .blue {
+        background-color: #34A3B2;
+      }
+
+      .bg {
+        margin-right: 100%;
+        transition: margin-right 2s ease;
+      }
+
+      .num:hover .bg{
+        margin-right: 0%;
+      }
+
+      #measure {
+        display: flex;
+        justify-content: space-evenly;
+        height: 4vw;
+        width: 100%;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        font-size: 1.5vw;
+      }
+
+      #month {
+        transform: rotate(-90deg);
+        width: fit-content;
+        position: relative;
+        top: 2.3vw;
+        font-size: 1.5vw;
+        left: -0.8%;
+      }
+
+      #text {
+        text-align: center;
+        margin-top: 5vw;
+        font-size: 1.4em;
+        margin-bottom: 9.5vw;
+      }
+      #graph {
+        display: grid;
+        grid-gap: 2vw;
+      }
+
+      #n1 {
+        width: 25vw;
+      }
+
+      #n2 {
+        width: 28vw;
+      }
+
+      #n3 {
+        width: 54vw;
+      }
+
+      #n4 {
+        width: 81vw;
+      }
+
+      #n5 {
+        width: 74vw;
+      }
+
+      #n6 {
+        width: 78vw;
+      }
+
+      #n7 {
+        width: 91vw;
+      }
+
+      #n8 {
+        width: 50vw;
+      }
+
+      #n9 {
+        width: 35vw;
+      }
+
+      #n10 {
+        width: 73vw;
+      }
+
+      #n11 {
+        width: 78vw;
+      }
+
+      #n12 {
+        width: 65vw;
+        border-bottom: none;
+      }
+
+      #n1 img {
+        width: 7.8vw;
+      }
+
+      #n11 img {
+        width: 7.2vw;
+      }
+
+      .burger {
+        display: none;
+      }
+
+
+    @media only screen and (min-width: 569px) and (max-width: 1023px) {
+
+    .content {
+      height: 100vh;
+    }
+
+    #graph {
+      grid-gap: 1.6vw;
+    }
+
+    #text {
+      font-size: 1.2em;
+    }
+
+
+
+
+    }
+
+    @media only screen and (min-width: 320px) and (max-width: 568px) {
+
+    	nav {
+    		height: 12vw;
+    		display: flex;
+    		justify-content: space-between;
+
+    	}
+
+    	nav a {
+    		display: none;
+    	}
+
+    	.logo {
+    		display: grid;
+    		position: relative;
+    		width: 25%;
+    	}
+
+    	.burger {
+    		display: grid;
+    		align-self: center;
+    		justify-self: center;
+    		margin-right: 4vw;
+    	}
+
+    	.burger img {
+    		width: 6vw;
+    	}
+
+      main {
+        grid-template-rows: repeat(6, auto) 80vw;
+        font-size: .9em;
+        /* height: calc(100vh - 15.9vw); */
+      }
+
+      #text {
+        font-size: .7em;
+      }
+
+      #graph {
+        height: 78.6vh;
+      }
+
+      .num {
+        align-items: center;
+      }
